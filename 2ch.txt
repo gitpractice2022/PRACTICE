@@ -1,1 +1,1 @@
-command checked
+checking checkout command
