@@ -1,0 +1,27 @@
+body{
+	background-color:white;
+    font-family:monospace,arial;
+    color:red;
+}
+h3{
+	font-family:monospace,arial;
+	font-weight:5px;
+	font-size:50px;
+	color:#39FF13;
+	font-variant:small-caps;
+	}
+.d1{
+	margin-top:50%;
+	margin-left: 30%;
+	margin-right: 50%;
+	margin-bottom: 100px;
+	border-width:5px;
+	border-color:green;
+	border-style: dotted;
+	padding-left:8%;
+	padding-bottom:5%;
+	width:40%;
+	}
+
+
+	

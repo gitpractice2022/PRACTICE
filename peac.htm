@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang=" ">
+<head>
+<meta charset="utf-8">
+<title>Destroyed by document.write</title>
+</head>
+<body>
+Hello<br>
+<button id="click">Erase the Doc!</button>
+<div id="helo"></div>
+</body>
+<script>
+var btn= document.getElementById("click");
+var save=document.getElementById("helo");
+btn.addEventListener("click",function(){
+document.write("Be gone!");
+})
+</script>
+</html>

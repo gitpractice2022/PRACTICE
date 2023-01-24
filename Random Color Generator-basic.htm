@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <title>Color Generator</title>
+    <body>
+        <h1>Hello Guys This Web page generates Shades of RGB Random colors upto given range</h1>
+        <hr>
+        <form>
+            <label>Enter total num of colors u want</label>
+            <input type="text" id="inp" required>
+            <br>
+            <button onclick="usi()">Done!</button>
+        
+        <script>
+            function usi(){
+            let val=document.getElementById("inp")
+            console.log(val.value)
+            let tot=val.value
+            console.log(tot)
+            if(tot==null || tot==0){
+                document.write("<h3>You Haven't Given any Range. plz REFRESH PAGE</h3>");
+            }
+            var arr=[1,2,3,4,5,6,7,8,9,0,"F","F","F","F","F","F"];
+            var para='<span style="font-size:5em; color:$HEX">▬</span>';
+            line=0;
+            for(i=0;i<tot;i++){
+                if(line==47){
+                line=0; 
+                document.write("<hr>"); 
+                }
+                code="#";
+                for(j=0;j<6;j++){
+                   ele=arr[Math.floor(Math.random()*14)];
+                   code=code+String(ele); 
+                }   
+               document.write(para.replace("$HEX",code));
+               line+=1;
+            }
+            }
+        </script>
+        </form>
+    </body>
+</html>

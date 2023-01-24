@@ -1,0 +1,37 @@
+body{
+	background-image:url("h.jpg");
+	background-size:cover
+    font-family:monospace,arial;
+    color:red;
+}
+h3{
+	font-family:monospace,arial;
+	font-weight:5px;
+	font-size:50px;
+	color:#39FF13;
+	font-variant:small-caps;
+	}
+.d1{
+	margin-top:20%;
+	margin-left: 30%;
+	margin-right: 50%;
+	margin-bottom: 100px;
+	border-width:15px;
+	border-color:red;
+	border-style: ridge;
+	padding-left:8%;
+	padding-bottom:5%;
+	width:40%;
+	}
+#sub{
+	background-color:red;
+	font-family:monospace;
+	font-variant:smallcaps;
+    height:2%;
+    width:30%;
+	color:blue;
+	font-size:150%;
+	}
+
+
+	

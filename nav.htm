@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Page title</title>
+  
+</head>
+<body style="background-color:black">
+ <button onclick="menu()" id="b1">MENU</button>
+ <div class="par" id="b2">HOME</div>
+ <div class="par" id="b3">ABOUT-US</div>
+ <div class="par" id="b4">RATE-US</div>
+ <style>
+   #b1{
+         height:30px;
+         width:345px;
+         border-style:solid;
+         border-radius:10px;
+         font-family: 'Courier New', monospace;
+         font-size:17px;
+id="0"         font-weight:bold;
+         color:yellow;
+       text-shadow:0px 0px 5px yellow;
+       background-color:black;
+       box-shadow: 0px 0px 5px 1px yellow;
+       border-color:yellow;
+     }
+   .par{
+         height:25px;
+         display:none;
+         padding-top:5px;
+         text-align :center; 
+        font-family: 'Courier New', monospace;
+        font-weight:bold;      
+         }
+     #b2{
+          position:relative; 
+          color:#FF0000;
+          text-shadow:0px 0px 10px #FF0000;  
+     }
+      #b3{ 
+          position:relative;
+          color:#00FF00; 
+          text-shadow:0px 0px 10px #00FF00;
+    }
+      #b4{  
+        position:relative;
+        color:#00FFFF;  
+     text-shadow:0px 0px 10px #00FFFF;    
+               }
+ </style>
+ <script>
+     function menu()
+     {
+     let  disp=document.getElementsByClassName("par")
+    if(disp[0].style.display=="none"){
+     for(let i=0;i<disp.length;i++){
+       disp[i].style.display="block"
+       }
+     console.log("menu opened")
+     }
+    else{
+     for(let i=0;i<disp.length;i++){
+       disp[i].style.display="none"
+       }
+     console.log("menu close")
+     }
+ }
+ </script>
+<!-- Top Navigation Menu -->
+</body>
+</html>
