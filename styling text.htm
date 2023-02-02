@@ -6,25 +6,27 @@
     <title>Style your text</title>
 </head>
 <body onload="run()">
-    <textarea id="area"></textarea>
-    <div id="menu">
+<textarea id="area"></textarea>
+<div id="menu">
         <div id="inmen"></div>
         <div class="fsiz">Style</div>
         <div class="fsiz">Size</div>
         <div class="fsiz">font</div>
-    </div>
-    <div id="menu">
-        <div id="inmen"></div>
-<select id="ssty" class="ssiz" onclick="chssty()">
-    </select>
-        <select id="letsiz" class="ssiz" onchange="chsiz()">
-        </select>
-        <select id="ffam" class="ssiz" onclick="chffam()"></select>
-    </div>
+</div>
+<div id="menu">
+ <div id="inmen"></div>
+<select id="ssty" class="ssiz" onchange="para()">
+</select>
+<select id="letsiz" class="ssiz" onchange="para()">
+</select>
+<select id="ffam" class="ssiz" onchange="para()">
+</select>
+</div>
+
   <style>
       #area{
          width:950px;
-         height:500px; 
+         height:500px;
       }
       #menu{
          width:850px;
@@ -54,14 +56,14 @@
       }
    function option2(){
      let opt=document.getElementById("letsiz")
-     for(let i=0;i<10;i++){
+     for(let i=10;i<=100;i+=10){
           opt.innerHTML+="<option>$</option>".replace("$",String(i))
     }
       console.log("size values loaded")
       }
      function option1(){
        let opt=document.getElementById("ssty") 
-       let arr=["normal","bold","bolder","oblique","lighter","italic"];
+       let arr=["normal","oblique","italic"];
        for(let prop of arr){
        opt.innerHTML+="<option>$</option>".replace("$",prop)    
        }
@@ -70,18 +72,21 @@
      <!-- fun3 -->
      function option3(){
        let opt=document.getElementById("ffam") 
-       let arr=["Arial","calibri","Tahoma","Rockwell","Lucida Console","Courier New"];
+       let arr=["Arial","Courier New","Georgia","cursive","fantasy"];
        for(let prop of arr){
        opt.innerHTML+="<option>$</option>".replace("$",prop)   
        }
      console.log("family values loaded") 
      }
-     function chsiz(){
-  let val=document.getElementById("letsiz")
-var text=document.getElementById("area")
-function para(){
-console.log(text.value)
-}
+     function para(){
+  let fntsiz=document.getElementById("letsiz").value
+  let fntsty=document.getElementById("ssty").value
+  let fntfam=document.getElementById("ffam").value
+var cont=document.getElementById("area");
+console.log(cont.value)
+cont.style.fontSize="#px".replace("#",String(fntsiz));
+cont.style.fontStyle="#".replace("#",String(fntsty));
+cont.style.fontFamily="#".replace("#",String(fntfam));
      }
   </script>
 </body>
